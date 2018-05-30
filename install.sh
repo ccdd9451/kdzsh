@@ -15,7 +15,7 @@ echo "Installing custom packages..."
 
 ZSHRC_OLD=$HOME/.zshrc
 ZSHRC=$HOME/.oh-my-zshrc 
-KDZSH=$PWD
+KDZSH="$( cd "$( dirname "$0" )" && pwd )"
 
 if [[ ! -e $ZSHRC ]]; then
     mv $ZSHRC_OLD $ZSHRC
