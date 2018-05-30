@@ -34,3 +34,4 @@ sed -ri "/plugins=\($/,/\)$/ {
   }" $ZSHRC
 # Fix language setting to en_US.UTF-8
 sed -ri "/\#.+LANG/ s/..//" $ZSHRC  
+sed -ri "/LANG=/ {p;s/LANG/LC_CTYPE/}" $ZSHRC  
