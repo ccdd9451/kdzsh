@@ -1,1 +1,1 @@
-# kdzsh
+# Personalized ZSH config
