@@ -20,6 +20,7 @@ KDZSH="$( cd "$( dirname "$0" )" && pwd )"
 if [[ ! -e $ZSHRC ]]; then
     mv $ZSHRC_OLD $ZSHRC
     echo "source $ZSHRC" >$ZSHRC_OLD 
+    echo "append_zshrc() { echo \$* >>"$ZSHRC_OLD" }" >> $ZSHRC_OLD
 else
     echo "WARNING: .oh-my-zshrc exists"
     echo "           ... do you want to revert first?"
