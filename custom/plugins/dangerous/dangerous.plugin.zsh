@@ -8,12 +8,12 @@ function clearls {
     ls --color=tty $@;
   fi
 }
-alias ls="clearls $@"
 alias la="\ls --color=tty -lAh"
 export PATH=$PATH:'.'
 
 if [ `uname` = 'Linux' ]
 then
     alias rm='mv --backup=t -t /tmp '
+    alias ls="clearls $@"
 fi
 
